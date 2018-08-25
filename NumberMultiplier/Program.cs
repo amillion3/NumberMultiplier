@@ -6,7 +6,15 @@ namespace NumberMultiplier
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Please input a comma-separated string of numbers:");
+            string inputString = Console.ReadLine();
+
+            int total = 1;
+            string [] inputArray = inputString.Split(',');
+            foreach (string a in inputArray)
+            {
+                total = int.Parse(a) * total;
+            }
         }
     }
 }
